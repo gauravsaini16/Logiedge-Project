@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE = 'http://localhost:5000/api';
+const BASE = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 
 export const getCustomers = () => axios.get(`${BASE}/customers`);
 export const createCustomer = (data) => axios.post(`${BASE}/customers`, data);
